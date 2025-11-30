@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="brand">
+                <i class="fas fa-cloud-sun"></i>
+                <span class="brand-title">SkyCast</span>
+            </div>
+            <p class="brand-sub">Get real-time weather for your favorite cities</p>
+        </div>
+
+        <div class="nav-center">
+            <div class="search">
+                <input type="text" id="city-input" placeholder="Enter city name" aria-label="City search">
+                <button id="add-city-btn" aria-label="Add city">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <button id="current-location-btn" aria-label="Use current location">
+                <i class="fas fa-map-marker-alt"></i> Current Location
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="loading" class="loading" aria-live="polite">
+            <i class="fas fa-spinner fa-spin"></i> Loading weather data...
+        </div>
+        <div id="weather-container" class="weather-container"></div>
+    </main>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
